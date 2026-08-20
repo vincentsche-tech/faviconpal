@@ -25,6 +25,7 @@ Live at: https://faviconpal.com
 
 ## Changelog
 
+- **v1.5.1** – Fix `i is not defined` runtime bug in `renderResults()` on all three pages (map callback was missing index parameter; caused conversion result rendering to fail).
 - **v1.5** – Add GA4 conversion event tracking: `convert_success`, `convert_failed`, `download_zip`, `download_ico`, `copy_code`, `copy_manifest` on all live pages. Test script now targets the engine script block by `crc32` marker (GA4 inline script is ignored).
 - **v1.4** – Add Google Analytics 4 (`G-QMF2LHLL2B`) to all live pages for traffic measurement.
 - **v1.3** – Add SVG to ICO page + SVG width/height guard.

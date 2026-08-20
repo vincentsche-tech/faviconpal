@@ -872,7 +872,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `<span class="stat-chip">📦 ${formatBytes(outBytes)} total</span>` +
       (srcBytes ? `<span class="stat-chip">${formatBytes(srcBytes)} → ${formatBytes(outBytes)}</span>` : '');
 
-    resultGrid.innerHTML = items.map(it => {
+    resultGrid.innerHTML = items.map((it, i) => {
       const previews = it.pngs.map((p, i) =>
         `<figure><img src="${pngToDataUrl(p.data)}" width="${p.width}" height="${p.height}" alt="${p.width}×${p.height} icon"><figcaption>${p.width}×${p.height}</figcaption></figure>`).join('');
       return `<div class="result-card">
