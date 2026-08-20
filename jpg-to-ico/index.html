@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QMF2LHLL2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QMF2LHLL2B');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JPG to ICO Converter – Free Online, No Signup, 100% Local Processing</title>
@@ -687,7 +695,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const bmp = await loadImage(f);
         files.push({ file: f, name: f.name, bmp, width: bmp.width, height: bmp.height });
       } catch (err) {
-        toast('Could not read "' + f.name + '" — unsupported or corrupted file.');
+        toast(err && err.message === 'SVG needs explicit width/height attributes'
+          ? '"' + f.name + '" has no width/height — add e.g. width="512" height="512" to the <svg> tag.'
+          : 'Could not read "' + f.name + '" — unsupported or corrupted file.');
       }
     }
     renderFileList();
@@ -703,6 +713,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const canvas = document.createElement('canvas');
         canvas.width = img.naturalWidth || img.width;
         canvas.height = img.naturalHeight || img.height;
+        if (!canvas.width || !canvas.height) {
+          URL.revokeObjectURL(url);
+          reject(new Error('SVG needs explicit width/height attributes'));
+          return;
+        }
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0);
         // Return a canvas-backed "image" object with dimensions
