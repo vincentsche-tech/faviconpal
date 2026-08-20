@@ -244,10 +244,16 @@
   details p { color: var(--text-2); font-size: 14px; margin-top: 10px; margin-bottom: 0; }
 
   .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 16px; }
-  .link-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; text-decoration: none; color: var(--text); display: block; }
+  .link-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; text-decoration: none; color: var(--text); display: block; position: relative; }
   .link-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
   .link-card b { font-size: 14px; color: var(--primary-600); }
   .link-card p { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+  .link-card.soon { opacity: .62; cursor: default; }
+  .link-card.soon:hover { border-color: var(--border); box-shadow: none; }
+  .link-card.soon b { color: var(--text-2); }
+  .lk-status { position: absolute; top: 12px; right: 14px; font-size: 10px; font-weight: 700; letter-spacing: .06em; padding: 2px 8px; border-radius: 999px; }
+  .lk-status.live { color: var(--green); background: var(--green-50); border: 1px solid #abefc6; }
+  .lk-status.soon-tag { color: var(--amber); background: var(--amber-50); border: 1px solid #fedf89; }
 
   footer { border-top: 1px solid var(--border); background: var(--card); padding: 28px 0; margin-top: 40px; }
   .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
@@ -451,12 +457,13 @@
 
       <h2>More conversion tools</h2>
       <div class="link-grid">
-        <a class="link-card" href="/svg-to-ico"><b>SVG to ICO</b><p>Vector to icon — any size, lossless.</p></a>
-        <a class="link-card" href="/jpg-to-ico"><b>JPG to ICO</b><p>Photos to icons (no alpha channel).</p></a>
-        <a class="link-card" href="/avif-to-ico"><b>AVIF to ICO</b><p>The new format, converted to Windows icons.</p></a>
-        <a class="link-card" href="/png-to-ico"><b>PNG to ICO</b><p>The classic path to favicon.ico.</p></a>
-        <a class="link-card" href="/mp4-to-webp"><b>MP4 to WebP</b><p>Video to animated WebP in your browser.</p></a>
-        <a class="link-card" href="/webp-compressor"><b>WebP Compressor</b><p>Shrink WebP size with live preview.</p></a>
+        <a class="link-card" href="/"><b>WebP to ICO</b><span class="lk-status live">LIVE</span><p>Compressed web images to Windows icons.</p></a>
+        <a class="link-card" href="/jpg-to-ico"><b>JPG to ICO</b><span class="lk-status live">LIVE</span><p>Photos to icons (no alpha channel).</p></a>
+        <a class="link-card" href="/svg-to-ico"><b>SVG to ICO</b><span class="lk-status live">LIVE</span><p>Vector to icon — any size, lossless.</p></a>
+        <a class="link-card" href="/avif-to-ico"><b>AVIF to ICO</b><span class="lk-status live">LIVE</span><p>The new format, converted to Windows icons.</p></a>
+        <span class="link-card soon"><b>PNG to ICO</b><span class="lk-status soon-tag">SOON</span><p>The classic path to favicon.ico.</p></span>
+        <span class="link-card soon"><b>MP4 to WebP</b><span class="lk-status soon-tag">SOON</span><p>Video to animated WebP in your browser.</p></span>
+        <span class="link-card soon"><b>WebP Compressor</b><span class="lk-status soon-tag">SOON</span><p>Shrink WebP size with live preview.</p></span>
       </div>
 
     </section>

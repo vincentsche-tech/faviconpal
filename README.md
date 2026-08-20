@@ -20,11 +20,14 @@ Live at: https://faviconpal.com
 | `/` | WebP to ICO converter (homepage) | ✅ live |
 | `/jpg-to-ico` | JPG to ICO | ✅ live |
 | `/svg-to-ico` | SVG to ICO | ✅ live |
-| `/avif-to-ico` | AVIF to ICO | 🔜 planned |
+| `/avif-to-ico` | AVIF to ICO | ✅ live |
 | `/png-to-ico` | PNG to ICO | 🔜 planned |
+| `/mp4-to-webp` | MP4 to WebP | 🔜 planned |
+| `/webp-compressor` | WebP Compressor | 🔜 planned |
 
 ## Changelog
 
+- **v1.6** – Add AVIF to ICO page (page 4 of the favicon matrix) + unified tool-matrix block on all four pages (live tools get LIVE badge & link, planned tools show SOON in gray, no more dead links). AVIF page copy layer: honest browser-compatibility section (Chrome/Edge 85+, Firefox 93+, Safari 16+), AVIF-is-already-lossy FAQ, "is AVIF good for favicons" FAQ.
 - **v1.5.1** – Fix `i is not defined` runtime bug in `renderResults()` on all three pages (map callback was missing index parameter; caused conversion result rendering to fail).
 - **v1.5** – Add GA4 conversion event tracking: `convert_success`, `convert_failed`, `download_zip`, `download_ico`, `copy_code`, `copy_manifest` on all live pages. Test script now targets the engine script block by `crc32` marker (GA4 inline script is ignored).
 - **v1.4** – Add Google Analytics 4 (`G-QMF2LHLL2B`) to all live pages for traffic measurement.
