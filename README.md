@@ -18,10 +18,19 @@ Live at: https://faviconpal.com
 | Path | Page | Status |
 |---|---|---|
 | `/` | WebP to ICO converter (homepage) | ✅ live |
-| `/jpg-to-ico` | JPG to ICO | 🔜 planned |
-| `/svg-to-ico` | SVG to ICO | 🔜 planned |
+| `/jpg-to-ico` | JPG to ICO | ✅ live |
+| `/svg-to-ico` | SVG to ICO | ✅ live |
 | `/avif-to-ico` | AVIF to ICO | 🔜 planned |
 | `/png-to-ico` | PNG to ICO | 🔜 planned |
+
+## Changelog
+
+- **v1.5** – Add GA4 conversion event tracking: `convert_success`, `convert_failed`, `download_zip`, `download_ico`, `copy_code`, `copy_manifest` on all live pages. Test script now targets the engine script block by `crc32` marker (GA4 inline script is ignored).
+- **v1.4** – Add Google Analytics 4 (`G-QMF2LHLL2B`) to all live pages for traffic measurement.
+- **v1.3** – Add SVG to ICO page + SVG width/height guard.
+- **v1.2** – Add JPG to ICO page + navigation fixes.
+- **v1.1** – Brand favicon set, sitemap, canonical aligned to `www.faviconpal.com`.
+- **v1.0** – WebP to ICO MVP.
 
 ## Testing
 

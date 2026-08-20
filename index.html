@@ -801,9 +801,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       const ms = Math.round(performance.now() - t0);
       renderResults(items, ms);
+      gtag('event', 'convert_success', { file_count: items.length, mode: mode });
       toast(`Converted ${items.length} file${items.length > 1 ? 's' : ''} in ${ms} ms — 100% locally.`);
     } catch (err) {
       console.error(err);
+      gtag('event', 'convert_failed', { error: (err && err.message) || 'unknown' });
       toast('Conversion failed: ' + err.message);
     } finally {
       convertBtn.disabled = false;
@@ -882,6 +884,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = items[+btn.dataset.idx];
         if (!item) return;
         downloadBlob(icoBlob(item), item.name + '.ico');
+        gtag('event', 'download_ico', { scope: 'single' });
       }));
 
     htmlCodeEl.textContent = makeHtmlSnippet();
@@ -934,6 +937,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     downloadBlob(new Blob([buildZip(finalZip)], { type: 'application/zip' }), 'favicon-package.zip');
+    gtag('event', 'download_zip', { file_count: lastResult.items.length, mode: mode });
   });
 
   function pngBytesAt(item, size) {
@@ -953,14 +957,17 @@ document.addEventListener('DOMContentLoaded', () => {
       downloadBlob(icoBlob(it), it.name + '.ico');
       await new Promise(r => setTimeout(r, 250));
     }
+    gtag('event', 'download_ico', { scope: 'all', file_count: lastResult.items.length });
   });
 
   $('copyCode').addEventListener('click', async () => {
     await copyText(makeHtmlSnippet());
+    gtag('event', 'copy_code');
     toast('HTML code copied to clipboard.');
   });
   $('copyManifest').addEventListener('click', async () => {
     await copyText(makeManifest('My Web App'));
+    gtag('event', 'copy_manifest');
     toast('Manifest copied to clipboard.');
   });
 

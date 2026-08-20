@@ -7,10 +7,13 @@ const zlib = require('zlib');
 
 const htmlPath = path.join(__dirname, '..', 'index.html');
 const html = fs.readFileSync(htmlPath, 'utf8');
-const m = html.match(/<script>([\s\S]*?)<\/script>/);
-if (!m) { console.error('NO SCRIPT FOUND'); process.exit(1); }
+// 页面头部有 GA4 gtag 内联脚本，不能取第一个 <script> 块；
+// 取包含主引擎（crc32）的那个脚本块。
+const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(x => x[1]);
+const engine = scripts.find(s => s.includes('function crc32')) || scripts[scripts.length - 1];
+if (!engine) { console.error('NO SCRIPT FOUND'); process.exit(1); }
 
-const fn = new Function(m[1] + '\n;return { crc32, buildIco, buildZip, makeManifest, makeHtmlSnippet };');
+const fn = new Function(engine + '\n;return { crc32, buildIco, buildZip, makeManifest, makeHtmlSnippet };');
 const { crc32, buildIco, buildZip, makeManifest } = fn();
 
 // ---- 生成真实 PNG（RGBA，zlib deflate）----
