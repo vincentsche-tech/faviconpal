@@ -1,12 +1,12 @@
-import os, re
+import os
 
-AD_SCRIPT = """<script>(function(s){s.dataset.zone='11641687',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>"""
+# 2026-08-25 策略修正：早期低流量工具站不用 OneClick（强干扰、负收益）。
+# 已按社群实战结论移除 zone 11641687 的 OneClick 代码（见 remove_monetag_and_rebuild.py）。
+# 工具站变现终点是 AdSense（千次访问 ~$6）；UV 破千 + GSC 攒 7 天数据后再申 AdSense，批下即上。
+# 本脚本暂不注入任何广告（AD_SCRIPT 留空），并检测是否误残留 OneClick，避免重新注入。
+AD_SCRIPT = ""  # OneClick 已移除；未来如需静默型(Popunder/Push)在此替换
 
 BASE = "."
-changed = 0
-skipped = 0
-files = []
-
 for dp, _, fns in os.walk(BASE):
     for fn in fns:
         if not fn.endswith(".html"):
@@ -15,20 +15,10 @@ for dp, _, fns in os.walk(BASE):
         with open(p, "r", encoding="utf-8") as f:
             txt = f.read()
         if "al5sm.com/tag.min.js" in txt:
-            skipped += 1
-            files.append((os.path.relpath(p, BASE), "skipped"))
-            continue
-        if "</head>" not in txt:
-            files.append((os.path.relpath(p, BASE), "no_head_tag"))
-            continue
-        # insert right before closing </head>
-        txt = txt.replace("</head>", AD_SCRIPT + "\n</head>", 1)
-        with open(p, "w", encoding="utf-8") as f:
-            f.write(txt)
-        changed += 1
-        files.append((os.path.relpath(p, BASE), "changed"))
-
-print("Changed:", changed)
-print("Skipped (already present):", skipped)
-for rel, status in files:
-    print(f"  {status:12} {rel}")
+            print("WARNING 仍残留 Monetag OneClick:", os.path.relpath(p, BASE))
+        if AD_SCRIPT and "</head>" in txt and AD_SCRIPT not in txt:
+            txt = txt.replace("</head>", AD_SCRIPT + "\n</head>", 1)
+            with open(p, "w", encoding="utf-8") as f:
+                f.write(txt)
+            print("Injected:", os.path.relpath(p, BASE))
+print("Done. No ad script configured (OneClick removed).")
