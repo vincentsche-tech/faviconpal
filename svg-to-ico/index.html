@@ -284,6 +284,70 @@
   }
   @keyframes spin { to { transform: rotate(360deg); } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it free to convert SVG to ICO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — completely free, with no limits, no registration and no watermark. This page has no paywall and no file-count restrictions for normal use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The conversion runs entirely in your browser using JavaScript. Your files never leave your device — you can even unplug your internet after opening the page and the tool still works."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the output as a website favicon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — that is the main use case. Choose the \"Favicon set\" mode to get favicon.ico, PNG icons at 16/32/180/192px, apple-touch-icon, site.webmanifest and the HTML code to paste into your site's head. Browsers request multiple sizes, so the full set gives the sharpest result everywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What sizes should a favicon be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimum you need: favicon.ico (16+32+48 inside one file), favicon-32x32.png and favicon-16x16.png. For best results on all platforms add apple-touch-icon.png (180×180), android-chrome-192x192.png and android-chrome-512x512.png. The favicon-set mode generates all of these automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My SVG turns into a blank or 0×0 icon — why?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some SVG files only contain a <code>viewBox</code> but no explicit <code>width</code>/<code>height</code> attributes, so the browser has no intrinsic size to render. The converter needs a known size to rasterize against. Fix: open the SVG in a text editor and make sure the root <code>&lt;svg&gt;</code> tag includes both, e.g. <code>&lt;svg width=\"512\" height=\"512\" viewBox=\"0 0 512 512\"&gt;</code>. Then re-upload."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the output still a vector? Will gradients survive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — ICO is a bitmap format, so the SVG is rasterized to pixels during conversion. The rendered result keeps gradients, strokes and filters, but at 16×16 most fine detail disappears. Design rule of thumb: for small icons, use bold solid shapes with high contrast; reserve gradients and thin strokes for the 128px+ sizes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an animated SVG be converted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ICO is a static format. An animated SVG (CSS or SMIL) is rendered in its initial state, so you get the first frame as a still icon. Animated favicons are not supported by modern browsers anyway — a static, high-contrast icon is the right choice."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -295,6 +359,7 @@
       <a href="/jpg-to-ico/">JPG to ICO</a>
       <a href="/svg-to-ico/" class="active">SVG to ICO</a>
       <a href="/avif-to-ico/">AVIF to ICO</a>
+      <a href="/favicon-generator.html">Favicon Generator</a>
     </nav>
   </div>
 </header>
@@ -470,6 +535,7 @@
 
       <h2>More conversion tools</h2>
       <div class="link-grid">
+        <a class="link-card" href="/favicon-generator.html"><b>Favicon Generator</b><span class="lk-status live">LIVE</span><p>Free in-browser favicon generator – pick any format, get the full set.</p></a>
         <a class="link-card" href="/"><b>WebP to ICO</b><span class="lk-status live">LIVE</span><p>The flagship converter — WebP images to favicon.</p></a>
         <a class="link-card" href="/jpg-to-ico/"><b>JPG to ICO</b><span class="lk-status live">LIVE</span><p>Photos to icons (no alpha channel).</p></a>
         <a class="link-card" href="/svg-to-ico/"><b>SVG to ICO</b><span class="lk-status live">LIVE</span><p>Vector to icon — any size, lossless.</p></a>

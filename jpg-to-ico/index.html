@@ -284,6 +284,70 @@
   }
   @keyframes spin { to { transform: rotate(360deg); } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it free to convert JPG to ICO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — completely free, with no limits, no registration and no watermark. This page has no paywall and no file-count restrictions for normal use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my images uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The conversion runs entirely in your browser using JavaScript. Your files never leave your device — you can even unplug your internet after opening the page and the tool still works."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the output as a website favicon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — that is the main use case. Choose the \"Favicon set\" mode to get favicon.ico, PNG icons at 16/32/180/192px, apple-touch-icon, site.webmanifest and the HTML code to paste into your site's head. Browsers request multiple sizes, so the full set gives the sharpest result everywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What sizes should a favicon be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimum you need: favicon.ico (16+32+48 inside one file), favicon-32x32.png and favicon-16x16.png. For best results on all platforms add apple-touch-icon.png (180×180), android-chrome-192x192.png and android-chrome-512x512.png. The favicon-set mode generates all of these automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert JPEG and JFIF files too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. JPEG, JPG and JFIF are the same format family, and all of them are accepted here — just drop the file in. The output is always a proper .ico with PNG-encoded frames, no matter which file extension your source used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does converting reduce image quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your source JPG is already lossy, but the conversion itself adds no further loss: with the \"Lossless\" option the icon is stored as PNG data inside the ICO. With \"High\" or \"Balanced\", resampling may soften edges when scaling down. For the sharpest 16×16 result, start from a large, high-contrast source image."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My JPG has a background I don't want — what can I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JPG can't store transparency, so the background is baked into the image. Crop the image first (or pick a PNG source) if you need transparent corners. Otherwise, use \"White fill\" or keep the original background — both give predictable results on any site."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -295,6 +359,7 @@
       <a href="/jpg-to-ico/" class="active">JPG to ICO</a>
       <a href="/svg-to-ico/">SVG to ICO</a>
       <a href="/avif-to-ico/">AVIF to ICO</a>
+      <a href="/favicon-generator.html">Favicon Generator</a>
     </nav>
   </div>
 </header>
@@ -470,6 +535,7 @@
 
       <h2>More conversion tools</h2>
       <div class="link-grid">
+        <a class="link-card" href="/favicon-generator.html"><b>Favicon Generator</b><span class="lk-status live">LIVE</span><p>Free in-browser favicon generator – pick any format, get the full set.</p></a>
         <a class="link-card" href="/"><b>WebP to ICO</b><span class="lk-status live">LIVE</span><p>The flagship converter — WebP images to favicon.</p></a>
         <a class="link-card" href="/jpg-to-ico/"><b>JPG to ICO</b><span class="lk-status live">LIVE</span><p>Photos to icons (no alpha channel).</p></a>
         <a class="link-card" href="/svg-to-ico/"><b>SVG to ICO</b><span class="lk-status live">LIVE</span><p>Vector to icon — any size, lossless.</p></a>
