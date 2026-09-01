@@ -353,6 +353,71 @@
         "@type": "Answer",
         "text": "ICO is a static format. An animated SVG (CSS or SMIL) is rendered in its initial state, so you get the first frame as a still icon. Animated favicons are not supported by modern browsers anyway — a static, high-contrast icon is the right choice."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert SVG to ICO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Drop your SVG into the box (or paste it from the clipboard), pick an output mode, and click Convert — the ICO is built in your browser in a fraction of a second. No account, no file-size cap, no watermark. Because SVG is a vector, the converter rasterizes it at the exact sizes you choose, so the result is crisp from 16×16 up to 256×256."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I generate a .ICO file from an image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Favicon set mode: add your image, click Convert, then download the favicon package. You get favicon.ico (with 16/32/48 px inside), favicon-16x16.png, favicon-32x32.png, apple-touch-icon.png, the Android PNGs, site.webmanifest and a ready-made HTML snippet to paste into your head. A single image becomes a complete favicon set in one click."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an ICO file just a PNG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. An ICO is a container that holds one or more bitmap frames (PNG or BMP) at different sizes — favicon.ico typically bundles 16, 32 and 48 px in one file. A plain .png is a single image with no built-in size list, so Windows and most browsers will not treat it as a favicon. This tool stores real PNG data inside the ICO, which is why the icons stay sharp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I convert an image to ICO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same flow for any source: open the page, add a WebP, PNG, JPG, AVIF or SVG, choose Single / Multi-size / Favicon-set, and download. Everything runs locally, so your image never leaves the device. For SVG specifically, make sure the file has explicit width/height attributes so the converter knows the render size."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to convert SVG to ICO",
+  "description": "Convert an SVG vector into a multi-size .ico favicon set, entirely in your browser.",
+  "totalTime": "PT10S",
+  "tool": [{
+    "@type": "HowToTool",
+    "name": "FaviconPal SVG to ICO converter (free, in-browser)"
+  }],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Add your SVG",
+      "text": "Drop the SVG file into the converter, click to browse, or paste it from your clipboard. Batch conversion is supported.",
+      "url": "https://www.faviconpal.com/svg-to-ico/#tool"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pick the output",
+      "text": "Choose Favicon set, Single ICO, or Multi-size ICO. Adjust quality and transparency (keep alpha or white fill).",
+      "url": "https://www.faviconpal.com/svg-to-ico/#tool"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Download",
+      "text": "Click Convert to ICO, then download the favicon package (.zip), the .ico file, or copy the ready-made HTML code into your site head.",
+      "url": "https://www.faviconpal.com/svg-to-ico/#tool"
     }
   ]
 }
@@ -510,6 +575,15 @@
       <h3>Why is my icon blurry at 16×16?</h3>
       <p>Small sizes lose detail because the source image is downscaled. Best practice: start from a large, simple shape (a 256×256 icon with high contrast and bold shapes survives 16×16 best). The preview grid in the result panel lets you check this before you commit to the download.</p>
 
+      <h2>SVG to ICO with a transparent background</h2>
+      <p>SVG keeps its transparency (the <code>alpha</code> channel) when rasterized, so a logo with a transparent background stays transparent as an ICO — as long as you keep the default <strong>“Keep alpha”</strong> mode. Some Windows contexts (file explorer, taskbar) paint a solid colour behind the icon; if you want predictable edges on light surfaces, switch to <strong>“White fill”</strong>. The converter never adds a watermark. This is the most common reason designers look for an <em>SVG to ICO transparent</em> converter: the source vector already has clean cut-out edges, and the ICO preserves them at every size from 16×16 to 256×256.</p>
+
+      <h2>Multi-size ICO output (16×16 to 256×256)</h2>
+      <p>A single <code>.ico</code> file can store several bitmap frames at different resolutions. FaviconPal's <strong>Favicon set</strong> mode bundles 16, 32, 48, 64, 128, 180, 192 and 256 px into one <code>favicon.ico</code>, plus the matching PNGs for Apple and Android. The <strong>Multi-size ICO</strong> mode lets you hand-pick exactly which frames go inside the file — useful when a target app only reads specific sizes. Browsers and Windows both pick the closest frame and downscale automatically, so one multi-size file covers every surface. If you searched for <em>SVG to ICO multiple sizes</em>, this is the mode you want.</p>
+
+      <h2>SVG to ICO on Windows and Mac</h2>
+      <p>The output is identical on every platform because the conversion runs in your browser with JavaScript — there is no OS-specific build. On <strong>Windows</strong>, the <code>.ico</code> works directly as a file icon and as <code>favicon.ico</code> in the site root. On <strong>macOS</strong>, the same file works as a favicon and the Apple Touch Icon (180×180 PNG) is generated alongside it for home-screen bookmarks. No app, no install — open the page and convert, whether you are on Windows 10/11, macOS Sonoma/Ventura, or Linux.</p>
+
       <h2>Frequently asked questions</h2>
       <div class="faq">
         <details>
@@ -539,6 +613,22 @@
         <details>
           <summary>Can an animated SVG be converted?</summary>
           <p>ICO is a static format. An animated SVG (CSS or SMIL) is rendered in its initial state, so you get the first frame as a still icon. Animated favicons are not supported by modern browsers anyway — a static, high-contrast icon is the right choice.</p>
+        </details>
+        <details>
+          <summary>Can I convert SVG to ICO?</summary>
+          <p>Yes. Drop your SVG into the box (or paste it from the clipboard), pick an output mode, and click Convert — the ICO is built in your browser in a fraction of a second. No account, no file-size cap, no watermark. Because SVG is a vector, the converter rasterizes it at the exact sizes you choose, so the result is crisp from 16×16 up to 256×256.</p>
+        </details>
+        <details>
+          <summary>How do I generate a .ICO file from an image?</summary>
+          <p>Use the “Favicon set” mode: add your image, click Convert, then download the favicon package. You get <code>favicon.ico</code> (with 16/32/48 px inside), <code>favicon-16x16.png</code>, <code>favicon-32x32.png</code>, <code>apple-touch-icon.png</code>, the Android PNGs, <code>site.webmanifest</code> and a ready-made HTML snippet to paste into your <code>&lt;head&gt;</code>. A single image becomes a complete favicon set in one click.</p>
+        </details>
+        <details>
+          <summary>Is an ICO file just a PNG?</summary>
+          <p>No. An ICO is a container that holds one or more bitmap frames (PNG or BMP) at different sizes — favicon.ico typically bundles 16, 32 and 48 px in one file. A plain <code>.png</code> is a single image with no built-in size list, so Windows and most browsers will not treat it as a favicon. This tool stores real PNG data inside the ICO, which is why the icons stay sharp.</p>
+        </details>
+        <details>
+          <summary>How can I convert an image to ICO?</summary>
+          <p>Same flow for any source: open the page, add a WebP, PNG, JPG, AVIF or SVG, choose Single / Multi-size / Favicon-set, and download. Everything runs locally, so your image never leaves the device. For SVG specifically, make sure the file has explicit <code>width</code>/<code>height</code> attributes so the converter knows the render size.</p>
         </details>
       </div>
 
