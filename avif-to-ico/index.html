@@ -361,6 +361,14 @@
         "@type": "Answer",
         "text": "No — favicons are delivered as ICO or PNG, so AVIF's compression advantage (great for large photos on the web) never comes into play at 16–256px icon sizes. The real question is compatibility: AVIF still fails to decode in older Safari. For a favicon that must work everywhere, a WebP/JPG/PNG/SVG source converted to ICO is the safer path."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Does AVIF to ICO keep transparency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. AVIF supports a full alpha channel, and the converter keeps it when rasterizing to ICO — so a transparent AVIF becomes a transparent .ico. This is one place AVIF beats JPG, which has no transparency. For the sharpest result on dark browser tabs, keep transparent padding around the artwork and avoid a filled background; the Favicon-set mode stores 32-bit PNG frames inside the .ico that retain the alpha."
+      }
     }
   ]
 }
@@ -554,6 +562,10 @@
         <details>
           <summary>Is AVIF a good format for favicons?</summary>
           <p>No — favicons are delivered as ICO or PNG, so AVIF's compression advantage (great for large photos on the web) never comes into play at 16–256px icon sizes. The real question is compatibility: AVIF still fails to decode in older Safari. For a favicon that must work everywhere, a WebP/JPG/PNG/SVG source converted to ICO is the safer path.</p>
+        </details>
+        <details>
+          <summary>Does AVIF to ICO keep transparency?</summary>
+          <p>Yes. AVIF supports a full alpha channel, and the converter keeps it when rasterizing to ICO — so a transparent AVIF becomes a transparent .ico. This is one place AVIF beats JPG, which has no transparency. For the sharpest result on dark browser tabs, keep transparent padding around the artwork and avoid a filled background; the Favicon-set mode stores 32-bit PNG frames inside the .ico that retain the alpha.</p>
         </details>
       </div>
 
@@ -1091,6 +1103,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList",
+"itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.faviconpal.com/"},
+    {"@type":"ListItem","position":2,"name":"AVIF to ICO","item":"https://www.faviconpal.com/avif-to-ico/"}
+]}
 </script>
 </body>
 </html>

@@ -385,6 +385,14 @@
         "@type": "Answer",
         "text": "Same flow for any source: open the page, add a WebP, PNG, JPG, AVIF or SVG, choose Single / Multi-size / Favicon-set, and download. Everything runs locally, so your image never leaves the device. For SVG specifically, make sure the file has explicit width/height attributes so the converter knows the render size."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SVG to ICO keep transparency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SVG carries an alpha channel, and the converter preserves it when rasterizing to ICO — so a transparent SVG becomes a transparent .ico with no white or black box behind it. That is the main reason to use SVG instead of JPG, which has no transparency at all. For the cleanest result on dark browser tabs, keep transparent padding around the artwork and avoid a filled background; the Favicon-set mode writes 32-bit PNG frames inside the .ico that retain the alpha."
+      }
     }
   ]
 }
@@ -629,6 +637,10 @@
         <details>
           <summary>How can I convert an image to ICO?</summary>
           <p>Same flow for any source: open the page, add a WebP, PNG, JPG, AVIF or SVG, choose Single / Multi-size / Favicon-set, and download. Everything runs locally, so your image never leaves the device. For SVG specifically, make sure the file has explicit <code>width</code>/<code>height</code> attributes so the converter knows the render size.</p>
+        </details>
+        <details>
+          <summary>Does SVG to ICO keep transparency?</summary>
+          <p>Yes. SVG carries an alpha channel, and the converter preserves it when rasterizing to ICO — so a transparent SVG becomes a transparent .ico with no white or black box behind it. That is the main reason to use SVG instead of JPG, which has no transparency at all. For the cleanest result on dark browser tabs, keep transparent padding around the artwork and avoid a filled background; the Favicon-set mode writes 32-bit PNG frames inside the .ico that retain the alpha.</p>
         </details>
       </div>
 
@@ -1166,6 +1178,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList",
+"itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.faviconpal.com/"},
+    {"@type":"ListItem","position":2,"name":"SVG to ICO","item":"https://www.faviconpal.com/svg-to-ico/"}
+]}
 </script>
 </body>
 </html>
