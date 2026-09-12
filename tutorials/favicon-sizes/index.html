@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QMF2LHLL2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QMF2LHLL2B');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yatffguzb3");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favicon Sizes Explained – What Size Should a Favicon Be?</title>
+<meta name="description" content="The standard favicon size is 16×16 px. See every size you actually need — 16, 32, 48, 180, 192, 512 — plus how ICO and manifest set them up.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.faviconpal.com/tutorials/favicon-sizes/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:title" content="Favicon Sizes Explained – What Size Should a Favicon Be?">
+<meta property="og:description" content="The standard favicon size is 16×16 px. See every size you actually need — 16, 32, 48, 180, 192, 512 — plus how ICO and manifest set them up.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.faviconpal.com/tutorials/favicon-sizes/">
+<meta property="og:site_name" content="FaviconPal">
+<meta property="og:image" content="https://www.faviconpal.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FaviconPal — free in-browser favicon tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Favicon Sizes Explained – What Size Should a Favicon Be?">
+<meta name="twitter:description" content="The standard favicon size is 16×16 px. See every size you actually need — 16, 32, 48, 180, 192, 512 — plus how ICO and manifest set them up.">
+<meta name="twitter:image" content="https://www.faviconpal.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --border: #e4e7ec;
+    --text: #101828; --text-2: #475467; --text-3: #98a2b3;
+    --primary: #2563eb; --primary-600: #1d4ed8; --primary-50: #eff6ff;
+    --green: #067647; --green-50: #ecfdf3;
+    --amber: #b54708; --amber-50: #fffaeb;
+    --red: #b42318; --red-50: #fef3f2;
+    --radius: 14px;
+    --shadow: 0 1px 3px rgba(16,24,40,.08), 0 8px 24px -8px rgba(16,24,40,.1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+  header { background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 17px; color: var(--text); text-decoration: none; }
+  .logo-mark { width: 30px; height: 30px; border-radius: 8px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    display: flex; align-items: center; justify-content: center; color: #fff; font-size: 15px; font-weight: 800; }
+  nav { display: flex; align-items: center; gap: 4px; }
+  nav a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 12px; border-radius: 8px; }
+  nav a:hover { background: var(--primary-50); color: var(--primary-600); }
+  nav a.active { color: var(--primary-600); background: var(--primary-50); }
+  @media (max-width: 720px) { nav { display: none; } }
+
+  .hero { text-align: center; padding: 44px 0 4px; }
+  .hero h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.18; max-width: 820px; margin: 0 auto; }
+  .hero p { color: var(--text-2); font-size: 17px; max-width: 680px; margin: 14px auto 0; }
+  .hero-badges { display: flex; justify-content: center; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; background: var(--card); border: 1px solid var(--border);
+    border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: var(--text-2); }
+  .badge.green { color: var(--green); background: var(--green-50); border-color: #abefc6; }
+  .badge.blue { color: var(--primary-600); background: var(--primary-50); border-color: #bfdbfe; }
+  .updated { font-size: 13px; color: var(--text-3); margin-top: 12px; }
+
+  .answer-box { background: var(--primary-50); border: 1px solid #bfdbfe; border-radius: 12px; padding: 18px 22px; margin: 26px 0; }
+  .answer-box b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--primary-600); margin-bottom: 7px; }
+  .answer-box p { color: var(--text); font-size: 15px; margin: 0; }
+
+  .toc { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 22px; margin: 24px 0; }
+  .toc b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--text-3); margin-bottom: 8px; }
+  .toc ol { margin: 0; padding-left: 20px; color: var(--text-2); }
+  .toc li { margin-bottom: 4px; }
+  .toc a { color: var(--primary-600); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  .content { margin: 48px 0; }
+  .content h2 { font-size: 25px; font-weight: 800; letter-spacing: -0.01em; margin: 40px 0 14px; }
+  .content h2:first-child { margin-top: 0; }
+  .content h3 { font-size: 18px; font-weight: 700; margin: 26px 0 10px; }
+  .content p { color: var(--text-2); margin-bottom: 14px; }
+  .content ul, .content ol { color: var(--text-2); padding-left: 22px; margin-bottom: 14px; }
+  .content li { margin-bottom: 6px; }
+  .content strong { color: var(--text); }
+  .content a { color: var(--primary-600); }
+
+  .note { background: var(--amber-50); border: 1px solid #fedf89; border-radius: 12px; padding: 14px 18px; margin: 18px 0; font-size: 14px; color: #7a2e0e; }
+  .note b { color: #7a2e0e; }
+
+  .code-block { background: #0f172a; color: #e2e8f0; border-radius: 10px; padding: 16px 18px;
+    font-family: 'SFMono-Regular', Consolas, monospace; font-size: 12.5px; line-height: 1.75;
+    overflow-x: auto; margin: 14px 0 20px; white-space: pre; }
+
+  table { width: 100%; border-collapse: collapse; margin: 18px 0 26px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 12px 16px; font-size: 14px; border-bottom: 1px solid var(--border); }
+  th { background: #f9fafb; font-weight: 600; color: var(--text-2); }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { font-weight: 600; }
+
+  .faq { margin-top: 20px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; }
+  details summary { cursor: pointer; font-weight: 600; font-size: 15px; }
+  details p { color: var(--text-2); font-size: 14px; margin-top: 10px; margin-bottom: 0; }
+  details p + p { margin-top: 8px; }
+
+  .cta-inline { text-align: center; margin: 32px 0 8px; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 12px 24px; border-radius: 10px;
+    font-size: 15px; font-weight: 600; cursor: pointer; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); text-decoration: none; }
+  .btn:hover { border-color: var(--primary); color: var(--primary-600); }
+  .btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .btn.primary:hover { background: var(--primary-600); color: #fff; }
+
+  .guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 20px; }
+  .guide-card { display: block; text-decoration: none; color: inherit; background: var(--card);
+    border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
+  .guide-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
+  .guide-card .gc-icon { font-size: 24px; }
+  .guide-card b { display: block; font-size: 16px; margin-top: 8px; color: var(--primary-600); }
+  .guide-card p { font-size: 13px; color: var(--text-2); margin-top: 4px; margin-bottom: 0; }
+
+  .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 16px; }
+  .link-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px;
+    text-decoration: none; color: var(--text); display: block; position: relative; }
+  .link-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
+  .link-card b { font-size: 14px; color: var(--primary-600); }
+  .link-card p { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+  .lk-status { position: absolute; top: 12px; right: 14px; font-size: 10px; font-weight: 700; letter-spacing: .06em; padding: 2px 8px; border-radius: 999px; }
+  .lk-status.live { color: var(--green); background: var(--green-50); border: 1px solid #abefc6; }
+
+  footer { border-top: 1px solid var(--border); background: var(--card); padding: 28px 0; margin-top: 40px; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .footer-inner p { font-size: 13px; color: var(--text-3); }
+
+  @media (max-width: 720px) {
+    .hero h1 { font-size: 27px; }
+    .content h2 { font-size: 21px; }
+    th, td { padding: 10px 12px; font-size: 13px; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Favicon Sizes Explained: What Size Should a Favicon Be?",
+  "description": "The standard favicon size is 16×16 px. See every size you actually need — 16, 32, 48, 180, 192, 512 — plus how ICO and manifest set them up.",
+  "url": "https://www.faviconpal.com/tutorials/favicon-sizes/",
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "author": {
+    "@type": "Organization",
+    "name": "FaviconPal",
+    "url": "https://www.faviconpal.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FaviconPal",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.faviconpal.com/assets/og-image.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.faviconpal.com/tutorials/favicon-sizes/"
+  },
+  "image": "https://www.faviconpal.com/assets/og-image.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What size should a favicon be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A favicon should be 16×16 px at minimum, with a 32×32 px version for high-DPI screens. In practice you ship both inside a single <code>favicon.ico</code>, then add PNGs at 180×180 (Apple Touch Icon), 192×192 and 512×512 (Android and PWA) so the icon stays sharp everywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the standard favicon size in pixels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The long-standing standard is 16×16 pixels — it has been the browser-tab and bookmark size since Internet Explorer 5. Modern browsers display a slightly larger icon, so 32×32 is now the practical default for the tab itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 16×16 or 32×32 better for a favicon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ship both. A 32×32 icon looks crisp on high-DPI (Retina) displays where the tab is rendered at 2× scale, while 16×16 is still needed for bookmarks, history lists and older browsers. An ICO file can hold multiple resolutions, so there is no reason to choose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a 512×512 favicon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if you want an installable web app (PWA) or you want Google to display your icon next to your site in mobile search results. Android uses 192×192 for the home-screen shortcut and 512×512 for the splash screen, and both come from your web app manifest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a favicon be a PNG instead of an ICO file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every modern browser (Chrome, Edge, Firefox, Safari) accepts PNG favicons declared with the <code>icon</code> link tag. You still want an ICO, because it packs several resolutions into one file and covers older Windows shortcuts and legacy browsers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size is the Apple Touch Icon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "180×180 px for current iPhones and iPads. Apple recommends a square PNG with no transparency, because iOS composites it onto a solid background — an icon with a transparent background can end up on black."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my favicon look blurry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three usual causes: the source image is smaller than the size you are asking for (so it gets upscaled), the source is not square (so it gets squashed or padded), or you only supplied a 16×16 icon and the browser stretched it for a high-DPI tab. Always generate from a square source of at least 512×512."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many sizes should one ICO file contain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three is the sweet spot: 16×16, 32×32 and 48×48. Add 64×64 and 128×128 if you also use the file for desktop shortcuts. The whole point of ICO is that the operating system picks the closest match, so extra sizes cost bytes but never cost quality."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="/"><span class="logo-mark">F</span> FaviconPal</a>
+    <nav>
+      <a href="/">WebP to ICO</a>
+      <a href="/jpg-to-ico/">JPG to ICO</a>
+      <a href="/svg-to-ico/">SVG to ICO</a>
+      <a href="/avif-to-ico/">AVIF to ICO</a>
+      <a href="/favicon-generator.html">Favicon Generator</a>
+      <a href="/tutorials/" class="active">Guides</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <h1>Favicon Sizes Explained: What Size Should a Favicon Be?</h1>
+      <p>Every favicon size that matters, what each one is for, and the four files that cover every browser, phone and installable web app.</p>
+      <div class="hero-badges">
+        <span class="badge blue">📐 Every size in one place</span>
+        <span class="badge green">⚡ Generated in your browser</span>
+        <span class="badge blue">🆓 Free forever</span>
+      </div>
+      <p class="updated">Last updated: September 12, 2026</p>
+    </section>
+    <div class="answer-box"><b>Short answer</b><p>A favicon should be <strong>16×16 px at minimum</strong>. Ship 16×16 and 32×32 inside a single <code>favicon.ico</code> for tabs and bookmarks, then add PNGs at <strong>180×180</strong> (Apple Touch Icon), <strong>192×192</strong> and <strong>512×512</strong> (Android and PWA) so the icon stays sharp on every device.</p></div>
+    <div class="toc"><b>On this page</b><ol>
+      <li><a href="#what-size">What size should a favicon be?</a></li>
+      <li><a href="#chart">The complete favicon size chart</a></li>
+      <li><a href="#minimum">The minimum favicon set for 2026</a></li>
+      <li><a href="#why-multiple">Why one size is never enough</a></li>
+      <li><a href="#platforms">Platform-by-platform requirements</a></li>
+      <li><a href="#mistakes">Common favicon size mistakes</a></li>
+      <li><a href="#generate">How to generate every size at once</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+    </ol></div>
+    <section class="content">
+      <h2 id="what-size">What size should a favicon be?</h2>
+      <p>The honest answer is that a favicon is not one size — it is <strong>a small set of sizes</strong>, and which sizes you need depends on where the icon is displayed. A browser tab, an iPhone home screen and an Android splash screen all draw from different files at different resolutions.</p>
+      <p>If you only remember one number, remember <strong>16×16 pixels</strong>. That is the size a favicon has been since 1999 and it is still what most bookmarks and history lists use. If you want the icon to look sharp everywhere without thinking about it, generate the four sizes below and wire them up once.</p>
+
+      <h2 id="chart">The complete favicon size chart</h2>
+      <p>These are the sizes that actually matter in 2026. Anything larger than 512×512 is a source asset, not a favicon.</p>
+      <table>
+        <tr><th>Size</th><th>Format</th><th>Where it is used</th></tr>
+        <tr><td>16×16</td><td>ICO / PNG</td><td>Browser tab, bookmarks, history, the classic default</td></tr>
+        <tr><td>32×32</td><td>ICO / PNG</td><td>High-DPI browser tabs, Windows taskbar shortcuts</td></tr>
+        <tr><td>48×48</td><td>ICO / PNG</td><td>Windows site icons and desktop shortcuts</td></tr>
+        <tr><td>96×96</td><td>PNG</td><td>Legacy Android home-screen icon (still referenced by older templates)</td></tr>
+        <tr><td>150×150</td><td>PNG</td><td>Windows tile image (<code>mstile</code>)</td></tr>
+        <tr><td>180×180</td><td>PNG</td><td>Apple Touch Icon — iPhone and iPad home screen</td></tr>
+        <tr><td>192×192</td><td>PNG</td><td>Android home screen, PWA manifest icon</td></tr>
+        <tr><td>512×512</td><td>PNG</td><td>Android splash screen, PWA install, Google mobile results</td></tr>
+      </table>
+
+      <h2 id="minimum">The minimum favicon set for 2026</h2>
+      <p>If you want to stop reading and just ship something correct, produce these four files and drop them in your site root:</p>
+      <div class="code-block">/favicon.ico               16×16 + 32×32 (+ 48×48) packed into one ICO
+/favicon-32x32.png         32×32 PNG
+/favicon-16x16.png         16×16 PNG
+/apple-touch-icon.png      180×180 PNG, no transparency
+
+Optional but recommended for installable web apps:
+/icon-192.png              192×192 PNG
+/icon-512.png              512×512 PNG
+/site.webmanifest          declares the two icons above</div>
+      <p>That set covers browser tabs, bookmarks, Windows shortcuts, iPhone home screens, Android home screens and PWA splash screens. It is what our own <a href="/favicon-generator.html">favicon generator</a> outputs.</p>
+
+      <h2 id="why-multiple">Why one size is never enough</h2>
+      <p>A single 512×512 PNG scaled down to 16×16 looks muddy. Browsers downscale by averaging neighbouring pixels, so fine detail — thin strokes, small text, a complicated monogram — turns into grey mush. The fix is not a better algorithm, it is <strong>supplying a purpose-drawn icon for each size</strong>.</p>
+      <p>That is exactly what the ICO format is for. An ICO file is a container: it holds one bitmap per resolution, and the operating system or browser picks whichever is closest to what it needs. Ship a 16×16 that has been simplified (thicker strokes, no fine detail) alongside a 32×32 and a 48×48, and every context gets a version that was designed for it.</p>
+      <div class="note"><b>Rule of thumb:</b> the smaller the icon, the simpler it must be. If your logo has a wordmark, drop it below 48×48 and use the glyph or the initial letter only.</div>
+
+      <h2 id="platforms">Platform-by-platform requirements</h2>
+      <p>Each platform looks for a specific file. This is the checklist to work through when a favicon works on one device but not another.</p>
+      <table>
+        <tr><th>Platform / surface</th><th>File it looks for</th><th>Size</th></tr>
+        <tr><td>Browser tab (Chrome, Edge, Firefox, Safari)</td><td><code>favicon.ico</code></td><td>16×16 &amp; 32×32</td></tr>
+        <tr><td>Bookmarks &amp; history</td><td><code>favicon.ico</code></td><td>16×16</td></tr>
+        <tr><td>iOS / iPadOS home screen</td><td><code>apple-touch-icon.png</code></td><td>180×180</td></tr>
+        <tr><td>Android home screen (PWA)</td><td>manifest <code>icon-192.png</code></td><td>192×192</td></tr>
+        <tr><td>Android splash screen (PWA)</td><td>manifest <code>icon-512.png</code></td><td>512×512</td></tr>
+        <tr><td>Windows taskbar / desktop shortcut</td><td><code>favicon.ico</code></td><td>32×32 or 48×48</td></tr>
+        <tr><td>Safari pinned tab</td><td><code>mask-icon.svg</code></td><td>Any (monochrome SVG)</td></tr>
+        <tr><td>Google mobile search result</td><td>Any declared icon</td><td>≥ 48×48, square</td></tr>
+      </table>
+      <p>For the exact markup that declares each of these, see <a href="/tutorials/how-to-add-a-favicon-to-a-website/">how to add a favicon to a website</a>.</p>
+
+      <h2 id="mistakes">Common favicon size mistakes</h2>
+      <ul>
+        <li><strong>Starting from a small source.</strong> If your master file is 64×64 you can never produce a clean 512×512. Keep a square master of at least 512×512, ideally 1024×1024.</li>
+        <li><strong>Using a non-square image.</strong> Favicons are square. A 500×300 logo gets squashed, or padded with bars, and looks broken at 16×16.</li>
+        <li><strong>Assuming one file is enough.</strong> A lone 16×16 stretched onto a Retina display is the most common cause of "my favicon is blurry".</li>
+        <li><strong>Fine detail at small sizes.</strong> Text and hairlines disappear below 32×32. Simplify the small variant.</li>
+        <li><strong>Transparent apple-touch-icon.</strong> iOS renders transparency as black. Fill the background.</li>
+        <li><strong>Forgetting the manifest.</strong> Android and PWA installs read <code>site.webmanifest</code>, not <code>favicon.ico</code> — without it, your icon shows as a grey placeholder.</li>
+      </ul>
+
+      <h2 id="generate">How to generate every size at once</h2>
+      <p>You do not need Photoshop or a command line. Drop a square source image into FaviconPal and it produces the ICO plus every PNG size listed above, along with the <code>&lt;head&gt;</code> snippet and the manifest file. Everything runs locally in your browser — nothing is uploaded.</p>
+      <div class="cta-inline">
+        <a class="btn primary" href="/favicon-generator.html">Generate the full favicon set →</a>
+      </div>
+
+      <h2 id="faq">Frequently asked questions</h2>
+
+  <div class="faq">
+      <details>
+        <summary>What size should a favicon be?</summary>
+        <p>A favicon should be <strong>16×16 px at minimum</strong>, with a <strong>32×32 px</strong> version for high-DPI screens. In practice you ship both inside a single <code>favicon.ico</code>, then add PNGs at <strong>180×180</strong> (Apple Touch Icon), <strong>192×192</strong> and <strong>512×512</strong> (Android and PWA) so the icon stays sharp everywhere.</p>
+      </details>
+      <details>
+        <summary>What is the standard favicon size in pixels?</summary>
+        <p>The long-standing standard is <strong>16×16 pixels</strong> — it has been the browser-tab and bookmark size since Internet Explorer 5. Modern browsers display a slightly larger icon, so 32×32 is now the practical default for the tab itself.</p>
+      </details>
+      <details>
+        <summary>Is 16×16 or 32×32 better for a favicon?</summary>
+        <p>Ship both. A 32×32 icon looks crisp on high-DPI (Retina) displays where the tab is rendered at 2× scale, while 16×16 is still needed for bookmarks, history lists and older browsers. An ICO file can hold multiple resolutions, so there is no reason to choose.</p>
+      </details>
+      <details>
+        <summary>Do I need a 512×512 favicon?</summary>
+        <p>Only if you want an <strong>installable web app (PWA)</strong> or you want Google to display your icon next to your site in mobile search results. Android uses 192×192 for the home-screen shortcut and 512×512 for the splash screen, and both come from your web app manifest.</p>
+      </details>
+      <details>
+        <summary>Can a favicon be a PNG instead of an ICO file?</summary>
+        <p>Yes. Every modern browser (Chrome, Edge, Firefox, Safari) accepts PNG favicons declared with the <code>icon</code> link tag. You still want an ICO, because it packs several resolutions into one file and covers older Windows shortcuts and legacy browsers.</p>
+      </details>
+      <details>
+        <summary>What size is the Apple Touch Icon?</summary>
+        <p><strong>180×180 px</strong> for current iPhones and iPads. Apple recommends a square PNG with no transparency, because iOS composites it onto a solid background — an icon with a transparent background can end up on black.</p>
+      </details>
+      <details>
+        <summary>Why does my favicon look blurry?</summary>
+        <p>Three usual causes: the source image is smaller than the size you are asking for (so it gets upscaled), the source is not square (so it gets squashed or padded), or you only supplied a 16×16 icon and the browser stretched it for a high-DPI tab. Always generate from a square source of at least 512×512.</p>
+      </details>
+      <details>
+        <summary>How many sizes should one ICO file contain?</summary>
+        <p>Three is the sweet spot: <strong>16×16, 32×32 and 48×48</strong>. Add 64×64 and 128×128 if you also use the file for desktop shortcuts. The whole point of ICO is that the operating system picks the closest match, so extra sizes cost bytes but never cost quality.</p>
+      </details>
+    </div>
+
+      <h2 id="tools">Convert your image now</h2>
+      <p>Everything on FaviconPal runs inside your browser — your files are never uploaded to a server. Pick the converter that matches your source file:</p>
+      <div class="link-grid">
+        <a class="link-card" href="/"><b>WebP to ICO</b><span class="lk-status live">LIVE</span><p>The flagship converter — WebP images to favicon.</p></a>
+        <a class="link-card" href="/jpg-to-ico/"><b>JPG to ICO</b><span class="lk-status live">LIVE</span><p>Photos to icons (no alpha channel).</p></a>
+        <a class="link-card" href="/svg-to-ico/"><b>SVG to ICO</b><span class="lk-status live">LIVE</span><p>Vector to icon — any size, lossless.</p></a>
+        <a class="link-card" href="/avif-to-ico/"><b>AVIF to ICO</b><span class="lk-status live">LIVE</span><p>The new format, converted to Windows icons.</p></a>
+        <a class="link-card" href="/favicon-generator.html"><b>Favicon Generator</b><span class="lk-status live">LIVE</span><p>Full favicon set with the HTML snippet.</p></a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <p>© 2026 FaviconPal · Free in-browser image tools</p>
+    <p>Made for developers &amp; designers · <a href="/privacy/" style="color:var(--text-3)">Privacy</a> · <a href="/contact/" style="color:var(--text-3)">Contact</a></p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.faviconpal.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://www.faviconpal.com/tutorials/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Favicon Sizes",
+      "item": "https://www.faviconpal.com/tutorials/favicon-sizes/"
+    }
+  ]
+}
+</script>
+</body>
+</html>
